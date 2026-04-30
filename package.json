@@ -1,0 +1,21 @@
+{
+  "name": "postpilot",
+  "version": "1.0.0",
+  "description": "Open-source social media autoposter — schedule and publish to Threads, LinkedIn, Facebook & Telegram from your terminal.",
+  "scripts": {
+    "meta:browser": "node scripts/meta_browser_helper.mjs",
+    "threads:audit:posts": "python3 scripts/threads_posts_audit.py",
+    "threads:audit:token-refresh": "python3 scripts/threads_token_refresh_audit.py",
+    "threads:dashboard": "python3 scripts/threads_dashboard_server.py",
+    "threads:publish:browser": "node scripts/threads_publish_playwright.mjs",
+    "threads:refresh:token": "bash scripts/threads_refresh_token.sh",
+    "threads:storage-state": "node scripts/threads_export_storage_state.mjs",
+    "threads:reauth:browser": "node scripts/threads_reauth_playwright.mjs",
+    "threads:reauth:server": "bash scripts/threads_reauth_server.sh",
+    "threads:install:dashboard": "sudo bash scripts/install_threads_dashboard_server.sh",
+    "threads:install:token-refresh-cron": "sudo bash scripts/install_threads_token_refresh_cron.sh"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0"
+  }
+}

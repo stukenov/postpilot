@@ -1,0 +1,49 @@
+# Environment and secrets
+.env
+
+# Real content (use content/examples/ as reference)
+content/threads/
+content/linkedin/
+content/facebook/
+content-plans/
+
+# Original strategy docs (see docs/content-strategy.md)
+threads-strategy/
+
+# Personal / non-English docs
+research/
+docs/presentations/
+docs/superpowers/
+*.pdf
+CLAUDE.md
+scripts/README_threads_publisher.md
+
+# Russian-language strategy files at root
+стратегия_*.md
+
+# One-off content generation scripts (hardcoded content)
+scripts/generate_threads_week_content.py
+scripts/generate_threads_strategy_docs.py
+
+# Platform-specific privacy policy
+public/
+
+# State, auth, and locks
+state/
+
+# Browser profiles
+.playwright-meta-profile/
+.playwright-linkedin-profile/
+.playwright-mcp/
+
+# Build artifacts
+node_modules/
+__pycache__/
+scripts/__pycache__/
+.pytest_cache/
+
+# OS
+.DS_Store
+
+# Playwright browsers (large binaries)
+.playwright-browsers/
