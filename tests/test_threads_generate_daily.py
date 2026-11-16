@@ -212,7 +212,7 @@ def test_build_system_prompt_includes_strategy():
     mod = _load_module()
     prompt = mod.build_system_prompt(strategy_root=Path("threads-strategy"))
     assert "контент-менеджер" in prompt
-    assert "220-380" in prompt
+    assert "350-550" in prompt
     assert "list_recent_posts" in prompt
 
 

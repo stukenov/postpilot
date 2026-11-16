@@ -349,7 +349,8 @@ def parse_post_markdown(markdown_text: str) -> tuple[str, str]:
     cta_marker = "## CTA"
 
     if text_marker not in markdown_text:
-        raise ValueError("Markdown post does not contain '## Текст поста'")
+        # No section heading: the whole file is the post body.
+        return clean_text_block(markdown_text), ""
 
     _, after_text = markdown_text.split(text_marker, 1)
     if cta_marker in after_text:
@@ -1728,7 +1729,7 @@ def build_parser() -> argparse.ArgumentParser:
     export_parser = subparsers.add_parser("export-txt", help="Create .txt siblings next to markdown posts.")
     export_parser.add_argument(
         "--content-root",
-        default="content/threads-week-2026-03-10-to-2026-03-16",
+        default="content/threads",
         help="Directory containing dated post folders.",
     )
     export_parser.set_defaults(func=command_export_txt)
@@ -1736,7 +1737,7 @@ def build_parser() -> argparse.ArgumentParser:
     queue_parser = subparsers.add_parser("build-queue", help="Build a scheduled publish queue from .txt files.")
     queue_parser.add_argument(
         "--content-root",
-        default="content/threads-week-2026-03-10-to-2026-03-16",
+        default="content/threads",
         help="Directory containing dated post folders.",
     )
     queue_parser.add_argument(

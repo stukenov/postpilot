@@ -34,6 +34,9 @@ def extract_post_text(md_content: str) -> str:
             break
         if capturing:
             result.append(line)
+    if not capturing:
+        # No section heading: the whole file is the post.
+        return md_content.strip()
     return "\n".join(result).strip()
 
 
