@@ -13,6 +13,8 @@
 
 ---
 
+A self-hosted, terminal-first alternative to Buffer and Hootsuite. No SaaS subscription, no vendor lock-in — your content lives in your git repo and publishes from your own machine or VPS.
+
 PostPilot treats social media posts as code. Write in Markdown, schedule with a queue, publish through a headless browser — no API rate limits, no monthly fees, full control.
 
 ## Why PostPilot?
@@ -56,7 +58,7 @@ No API tokens needed for publishing. No character limits. No feature restriction
 | Threads (Meta) | Playwright (headless Chromium) | Production |
 | LinkedIn | Playwright (headless Chromium) | Production |
 | Facebook | Playwright (headless Chromium) | Production |
-| Telegram | Playwright (headless Chromium) | Production |
+| Telegram | Bot API (`api.telegram.org`) | Production |
 
 ## Quick Start
 
@@ -68,7 +70,7 @@ No API tokens needed for publishing. No character limits. No feature restriction
 ### Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/postpilot.git
+git clone https://github.com/stukenov/postpilot.git
 cd postpilot
 
 npm install
@@ -266,6 +268,10 @@ To contribute:
 2. Create a feature branch
 3. Write tests for new functionality
 4. Submit a pull request
+
+## Related projects
+
+- [keste](https://github.com/stukenov/keste) — developer tools by the same author.
 
 ## License
 
