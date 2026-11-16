@@ -16,6 +16,6 @@
     "threads:install:token-refresh-cron": "sudo bash scripts/install_threads_token_refresh_cron.sh"
   },
   "dependencies": {
-    "playwright": "^1.59.1"
+    "playwright": "^1.60.0"
   }
 }
